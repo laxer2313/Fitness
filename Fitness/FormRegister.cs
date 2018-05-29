@@ -16,5 +16,10 @@ namespace Fitness
         {
             InitializeComponent();
         }
+
+        private void buttonBackToMainMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
