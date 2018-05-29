@@ -44,7 +44,7 @@
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonLogin.ForeColor = System.Drawing.Color.Brown;
-            this.buttonLogin.Location = new System.Drawing.Point(12, 361);
+            this.buttonLogin.Location = new System.Drawing.Point(12, 360);
             this.buttonLogin.MinimumSize = new System.Drawing.Size(126, 51);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(126, 51);
@@ -74,7 +74,7 @@
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F);
             this.buttonExit.ForeColor = System.Drawing.Color.Brown;
-            this.buttonExit.Location = new System.Drawing.Point(336, 361);
+            this.buttonExit.Location = new System.Drawing.Point(336, 360);
             this.buttonExit.MinimumSize = new System.Drawing.Size(126, 51);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(126, 51);
@@ -84,15 +84,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(-47, -45);
+            this.pictureBox1.Image = global::Fitness.Properties.Resources._1;
+            this.pictureBox1.Location = new System.Drawing.Point(-9, -57);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(566, 442);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.Size = new System.Drawing.Size(531, 469);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
