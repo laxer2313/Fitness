@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegister));
             this.buttonBackToMainMenu = new System.Windows.Forms.Button();
             this.labelName = new System.Windows.Forms.Label();
@@ -56,7 +57,9 @@
             this.dateTimePickerDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.comboBoxSex = new System.Windows.Forms.ComboBox();
             this.pictureBoxSmallLogo = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSmallLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonBackToMainMenu
@@ -64,7 +67,7 @@
             this.buttonBackToMainMenu.FlatAppearance.BorderSize = 2;
             this.buttonBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBackToMainMenu.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F);
-            this.buttonBackToMainMenu.ForeColor = System.Drawing.Color.Brown;
+            this.buttonBackToMainMenu.ForeColor = System.Drawing.Color.Red;
             this.buttonBackToMainMenu.Location = new System.Drawing.Point(82, 524);
             this.buttonBackToMainMenu.MinimumSize = new System.Drawing.Size(126, 51);
             this.buttonBackToMainMenu.Name = "buttonBackToMainMenu";
@@ -89,7 +92,7 @@
             this.buttonCreateUser.FlatAppearance.BorderSize = 2;
             this.buttonCreateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCreateUser.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F);
-            this.buttonCreateUser.ForeColor = System.Drawing.Color.Brown;
+            this.buttonCreateUser.ForeColor = System.Drawing.Color.Red;
             this.buttonCreateUser.Location = new System.Drawing.Point(264, 524);
             this.buttonCreateUser.MinimumSize = new System.Drawing.Size(126, 51);
             this.buttonCreateUser.Name = "buttonCreateUser";
@@ -271,6 +274,7 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(264, 27);
             this.textBoxEmail.TabIndex = 24;
+            this.textBoxEmail.TextChanged += new System.EventHandler(this.textBox1_Validated);
             // 
             // textBoxZipCode
             // 
@@ -315,6 +319,10 @@
             this.pictureBoxSmallLogo.TabIndex = 17;
             this.pictureBoxSmallLogo.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,6 +364,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rejestracja";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSmallLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,5 +399,6 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.DateTimePicker dateTimePickerDateOfBirth;
         private System.Windows.Forms.ComboBox comboBoxSex;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

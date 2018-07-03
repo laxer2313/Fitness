@@ -89,7 +89,7 @@
             this.buttonBackToMainMenu.FlatAppearance.BorderSize = 2;
             this.buttonBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBackToMainMenu.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F);
-            this.buttonBackToMainMenu.ForeColor = System.Drawing.Color.Brown;
+            this.buttonBackToMainMenu.ForeColor = System.Drawing.Color.Red;
             this.buttonBackToMainMenu.Location = new System.Drawing.Point(95, 198);
             this.buttonBackToMainMenu.MinimumSize = new System.Drawing.Size(126, 51);
             this.buttonBackToMainMenu.Name = "buttonBackToMainMenu";
@@ -104,7 +104,7 @@
             this.buttonLogIn.FlatAppearance.BorderSize = 2;
             this.buttonLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogIn.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F);
-            this.buttonLogIn.ForeColor = System.Drawing.Color.Brown;
+            this.buttonLogIn.ForeColor = System.Drawing.Color.Red;
             this.buttonLogIn.Location = new System.Drawing.Point(275, 198);
             this.buttonLogIn.MinimumSize = new System.Drawing.Size(126, 51);
             this.buttonLogIn.Name = "buttonLogIn";

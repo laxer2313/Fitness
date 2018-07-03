@@ -41,7 +41,7 @@
             this.buttonLogin.FlatAppearance.BorderSize = 2;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonLogin.ForeColor = System.Drawing.Color.Brown;
+            this.buttonLogin.ForeColor = System.Drawing.Color.Red;
             this.buttonLogin.Location = new System.Drawing.Point(22, 360);
             this.buttonLogin.MinimumSize = new System.Drawing.Size(126, 51);
             this.buttonLogin.Name = "buttonLogin";
@@ -56,7 +56,7 @@
             this.buttonRegister.FlatAppearance.BorderSize = 2;
             this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegister.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F);
-            this.buttonRegister.ForeColor = System.Drawing.Color.Brown;
+            this.buttonRegister.ForeColor = System.Drawing.Color.Red;
             this.buttonRegister.Location = new System.Drawing.Point(174, 360);
             this.buttonRegister.MinimumSize = new System.Drawing.Size(126, 51);
             this.buttonRegister.Name = "buttonRegister";
@@ -71,7 +71,7 @@
             this.buttonExit.FlatAppearance.BorderSize = 2;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F);
-            this.buttonExit.ForeColor = System.Drawing.Color.Brown;
+            this.buttonExit.ForeColor = System.Drawing.Color.Red;
             this.buttonExit.Location = new System.Drawing.Point(325, 360);
             this.buttonExit.MinimumSize = new System.Drawing.Size(126, 51);
             this.buttonExit.Name = "buttonExit";
