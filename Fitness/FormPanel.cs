@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Fitness
 {
-    public partial class FormLogin : Form
+    public partial class FormPanel : Form
     {
-        public FormLogin()
+        public FormPanel()
         {
             InitializeComponent();
-        }
-
-        private void buttonBackToMainMenu_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void buttonLogIn_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
