@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Fitness
 {
-    public partial class FormPlan : Form
+    public partial class FormRegister : Form, View.IFormRegister
     {
-        public FormPlan()
+        public FormRegister()
         {
             InitializeComponent();
         }
+
+        private void buttonBackToMainMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

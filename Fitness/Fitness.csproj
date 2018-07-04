@@ -61,59 +61,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
+    <Compile Include="View\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMainMenu.cs">
+    <Compile Include="View\FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMainMenu.Designer.cs">
+    <Compile Include="View\FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPanel.cs">
+    <Compile Include="View\FormPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPanel.Designer.cs">
+    <Compile Include="View\FormPanel.Designer.cs">
       <DependentUpon>FormPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPlan.cs">
+    <Compile Include="View\FormPlan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPlan.Designer.cs">
+    <Compile Include="View\FormPlan.Designer.cs">
       <DependentUpon>FormPlan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRegister.cs">
+    <Compile Include="View\FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRegister.Designer.cs">
+    <Compile Include="View\FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modell\DataBases\DBConnection.cs" />
-    <Compile Include="Modell\DataBases\Query.cs" />
-    <Compile Include="Modell\IModel.cs" />
-    <Compile Include="Modell\Model.cs" />
-    <Compile Include="Modell\User.cs" />
+    <Compile Include="Model\DataBases\DBConnection.cs" />
+    <Compile Include="Model\DataBases\Query.cs" />
+    <Compile Include="Model\IModel.cs" />
+    <Compile Include="Model\Model.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Presenter\Presenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\IView.cs" />
-    <Compile Include="View\View.cs" />
-    <EmbeddedResource Include="FormLogin.resx">
+    <Compile Include="View\IFormLogin.cs" />
+    <Compile Include="View\IFormMainMenu.cs" />
+    <Compile Include="View\IFormPanel.cs" />
+    <Compile Include="View\IFormPlan.cs" />
+    <Compile Include="View\IFormRegister.cs" />
+    <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPanel.resx">
+    <EmbeddedResource Include="View\FormPanel.resx">
       <DependentUpon>FormPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPlan.resx">
+    <EmbeddedResource Include="View\FormPlan.resx">
       <DependentUpon>FormPlan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRegister.resx">
+    <EmbeddedResource Include="View\FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMainMenu.resx">
+    <EmbeddedResource Include="View\FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -9,19 +9,21 @@ namespace Fitness.Presenter
     class Presenter
     {
         Modell.IModel model;
-        View.IView view;
+        View.IFormLogin formLogin;
+        View.IFormMainMenu formMainMenu;
+        View.IFormPanel formPanel;
+        View.IFormPlan formPlan;
+        View.IFormRegister formRegister;
 
-        public Presenter(Modell.Model model, View.IView view)
+        public Presenter(Modell.Model model, View.IFormLogin formLogin, View.IFormMainMenu formMainMenu, View.IFormPanel formPanel, View.IFormPlan formPlan, View.IFormRegister formRegister)
         {
             this.model = model;
-            this.view = view;
-
-            view.Login += login;
+            this.formLogin = formLogin;
+            this.formMainMenu = formMainMenu;
+            this.formPanel = formPanel;
+            this.formPlan = formPlan;
+            this.formRegister = formRegister;
         }
 
-        void login(string email, string password)
-        {
-            view.User = model.Login(email, password);
-        }
     }
 }

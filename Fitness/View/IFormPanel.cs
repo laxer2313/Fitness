@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fitness.View
 {
-    interface IView
+    interface IFormPanel
     {
-        event Action<string, string> Login;
-
-        Modell.User User { get; set; }
     }
 }
