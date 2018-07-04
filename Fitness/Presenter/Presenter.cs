@@ -24,7 +24,7 @@ namespace Fitness.Presenter
             //this.formPlan = formPlan;
             //this.formRegister = formRegister;
 
-            formLogin.Login += Login;
+            //formLogin.Login += Login;
         }
 
         void Login(string email, string password)
