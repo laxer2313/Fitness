@@ -18,7 +18,7 @@ namespace Fitness
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Menu());
             Modell.Model model = new Modell.Model();
-            Presenter.Presenter p = new Presenter.Presenter(model); 
+            Presenter.Presenter pre = new Presenter.Presenter(model); 
 
 
 
