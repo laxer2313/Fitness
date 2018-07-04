@@ -8,5 +8,6 @@ namespace Fitness.View
 {
     interface IFormLogin
     {
+        event Action<string, string> Login;
     }
 }

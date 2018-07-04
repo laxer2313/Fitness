@@ -22,9 +22,11 @@ namespace Fitness
             this.Close();
         }
 
+        public event Action<string, string> Login;
+
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
-
+            Login(textBoxEmail.Text, textBoxPassword.Text);
         }
     }
 }

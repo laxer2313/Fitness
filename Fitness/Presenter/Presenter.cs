@@ -15,15 +15,21 @@ namespace Fitness.Presenter
         View.IFormPlan formPlan;
         View.IFormRegister formRegister;
 
-        public Presenter(Modell.Model model, View.IFormLogin formLogin, View.IFormMainMenu formMainMenu, View.IFormPanel formPanel, View.IFormPlan formPlan, View.IFormRegister formRegister)
+        public Presenter(Modell.Model model)
         {
             this.model = model;
-            this.formLogin = formLogin;
-            this.formMainMenu = formMainMenu;
-            this.formPanel = formPanel;
-            this.formPlan = formPlan;
-            this.formRegister = formRegister;
+            //this.formLogin = formLogin;
+            //this.formMainMenu = formMainMenu;
+            //this.formPanel = formPanel;
+            //this.formPlan = formPlan;
+            //this.formRegister = formRegister;
+
+            formLogin.Login += Login;
         }
 
+        void Login(string email, string password)
+        {
+            model.Login(email, password);
+        }
     }
 }

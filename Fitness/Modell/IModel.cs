@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Fitness.Modell
 {
-    class Model : IModel
+    interface IModel
     {
-        public User Login(string email, string password)
-        {
-            throw new NotImplementedException();
-        }
+        void Login(string email, string password);
+        
+
     }
 }
