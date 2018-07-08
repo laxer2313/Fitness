@@ -59,6 +59,7 @@
             this.buttonPlan.TabIndex = 1;
             this.buttonPlan.Text = "Plan zajęć";
             this.buttonPlan.UseVisualStyleBackColor = true;
+            this.buttonPlan.Click += new System.EventHandler(this.buttonPlan_Click);
             // 
             // buttonBuy
             // 
@@ -73,6 +74,7 @@
             this.buttonBuy.TabIndex = 2;
             this.buttonBuy.Text = "Kup karnet";
             this.buttonBuy.UseVisualStyleBackColor = true;
+            this.buttonBuy.Click += new System.EventHandler(this.buttonBuy_Click);
             // 
             // buttonLogout
             // 
@@ -87,6 +89,7 @@
             this.buttonLogout.TabIndex = 3;
             this.buttonLogout.Text = "Wyloguj";
             this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // buttonClose
             // 
@@ -101,6 +104,7 @@
             this.buttonClose.TabIndex = 4;
             this.buttonClose.Text = "Zamknij";
             this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // FormPanel
             // 

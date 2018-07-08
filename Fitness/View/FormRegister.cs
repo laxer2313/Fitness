@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Fitness
 {
-    public partial class FormRegister : Form, View.IFormRegister
+    public partial class FormRegister : Form
     {
         public FormRegister()
         {

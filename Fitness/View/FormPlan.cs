@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Fitness
 {
-    public partial class FormPlan : Form, View.IFormPlan
+    public partial class FormPlan : Form
     {
         public FormPlan()
         {
             InitializeComponent();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

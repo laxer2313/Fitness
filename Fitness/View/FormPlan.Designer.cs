@@ -157,10 +157,12 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -294,7 +296,7 @@
             this.tableLayoutPanel1.Controls.Add(this.textBox_719, 7, 13);
             this.tableLayoutPanel1.Controls.Add(this.textBox_720, 7, 14);
             this.tableLayoutPanel1.Controls.Add(this.textBox_420, 4, 14);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 98);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 15;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
@@ -1661,7 +1663,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.textBox1.Location = new System.Drawing.Point(864, 484);
+            this.textBox1.Location = new System.Drawing.Point(869, 570);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -1672,7 +1674,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(952, 487);
+            this.label22.Location = new System.Drawing.Point(957, 573);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(99, 26);
             this.label22.TabIndex = 54;
@@ -1681,7 +1683,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(952, 539);
+            this.label23.Location = new System.Drawing.Point(957, 625);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(91, 26);
             this.label23.TabIndex = 56;
@@ -1690,7 +1692,7 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.textBox2.Location = new System.Drawing.Point(864, 536);
+            this.textBox2.Location = new System.Drawing.Point(869, 622);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -1701,7 +1703,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(952, 587);
+            this.label24.Location = new System.Drawing.Point(957, 673);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(61, 13);
             this.label24.TabIndex = 58;
@@ -1711,7 +1713,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.textBox3.Location = new System.Drawing.Point(864, 584);
+            this.textBox3.Location = new System.Drawing.Point(869, 670);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
@@ -1722,7 +1724,7 @@
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textBox4.Location = new System.Drawing.Point(864, 416);
+            this.textBox4.Location = new System.Drawing.Point(869, 502);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
@@ -1733,26 +1735,17 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(962, 424);
+            this.label25.Location = new System.Drawing.Point(967, 510);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(51, 13);
             this.label25.TabIndex = 60;
             this.label25.Text = "Zapisano";
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(931, 24);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(96, 13);
-            this.label26.TabIndex = 61;
-            this.label26.Text = "Przycisk wyloguj tu";
-            // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label27.Location = new System.Drawing.Point(897, 224);
+            this.label27.Location = new System.Drawing.Point(902, 310);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(116, 17);
             this.label27.TabIndex = 62;
@@ -1761,22 +1754,46 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(933, 55);
+            this.label28.Location = new System.Drawing.Point(936, 282);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(41, 13);
             this.label28.TabIndex = 63;
             this.label28.Text = "label28";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Fitness.Properties.Resources._2;
+            this.pictureBox1.Location = new System.Drawing.Point(280, -224);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(612, 378);
+            this.pictureBox1.TabIndex = 64;
+            this.pictureBox1.TabStop = false;
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.FlatAppearance.BorderSize = 2;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonClose.ForeColor = System.Drawing.Color.Red;
+            this.buttonClose.Location = new System.Drawing.Point(869, 430);
+            this.buttonClose.MinimumSize = new System.Drawing.Size(126, 51);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(179, 51);
+            this.buttonClose.TabIndex = 65;
+            this.buttonClose.Text = "Zamknij";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // FormPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1059, 643);
+            this.ClientSize = new System.Drawing.Size(1059, 717);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label24);
@@ -1786,11 +1803,16 @@
             this.Controls.Add(this.label22);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1075, 756);
+            this.MinimumSize = new System.Drawing.Size(1075, 756);
             this.Name = "FormPlan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Plan zajęć";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1860,7 +1882,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox textBox_109;
@@ -1929,5 +1950,7 @@
         private System.Windows.Forms.TextBox textBox_719;
         private System.Windows.Forms.TextBox textBox_720;
         private System.Windows.Forms.TextBox textBox_420;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonClose;
     }
 }
