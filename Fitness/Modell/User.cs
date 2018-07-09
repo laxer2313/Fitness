@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Fitness.Modell.DataBases;
+
 namespace Fitness.Modell
 {
     class User
     {
-        public User(List<string> list)
+        public User()
         {
-            
+
         }
         public string Email { get; }
         public string Password { get; }
@@ -25,6 +27,10 @@ namespace Fitness.Modell
         public string BirthdayDate { get; }
         public string Sex { get; }
 
-
+        public bool IsLoginValid(string email, string password)
+        {
+            var comand = Query.GetUser(email, password);
+            return false;
+        }
     }
 }

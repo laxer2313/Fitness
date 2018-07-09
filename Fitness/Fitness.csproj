@@ -97,14 +97,13 @@
     <Compile Include="View\FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modell\DataBases\DBConnection.cs" />
+    <Compile Include="Modell\DataBases\DatabaseConnection.cs" />
     <Compile Include="Modell\DataBases\Query.cs" />
-    <Compile Include="Modell\IModel.cs" />
-    <Compile Include="Modell\Model.cs" />
     <Compile Include="Modell\User.cs" />
-    <Compile Include="Presenter\Presenter.cs" />
+    <Compile Include="Presenter\LoginPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\ILogin.cs" />
     <EmbeddedResource Include="View\FormBuy.resx">
       <DependentUpon>FormBuy.cs</DependentUpon>
     </EmbeddedResource>

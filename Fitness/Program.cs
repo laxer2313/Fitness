@@ -17,12 +17,7 @@ namespace Fitness
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Menu());
-            Modell.Model model = new Modell.Model();
-            Presenter.Presenter pre = new Presenter.Presenter(model); 
-            
-
-
-
+ 
         }
     }
 }

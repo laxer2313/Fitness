@@ -11,7 +11,7 @@ namespace Fitness.Modell.DataBases
         static string GET_PASSWORD = "select haslo from osoby where email={0}";
         static string GET_USER = "select * from osoby where email={0} and haslo={1}";
         static string GET_CLASSESS = "select * from zajecia";
-        static string ADD_USER = "isnert osoby value({0}, {1}, {2}, {3}, {4], {5}, {6}, {7}, {8}, {9}, now(), {10}, {11})";
+        static string ADD_USER = "insert osoby value({0}, {1}, {2}, {3}, {4], {5}, {6}, {7}, {8}, {9}, now(), {10}, {11})";
 
         public static string GetPassword(string email)
         {
@@ -34,6 +34,13 @@ namespace Fitness.Modell.DataBases
             query.AppendFormat(ADD_USER, user.Email, user.Name, user.LastName, user.PhoneNumber, user.City, user.PosteCode,
                                user.Street, user.StreetNumber, user.ApartmentNumber, user.BirthdayDate, user.Sex, user.Password);
             return query.ToString();
+        }
+
+        public static string AddTestUser(string email, string pass)
+        {
+            // tak mozna pisac zapytania
+            string xd = String.Format("insert osoby value(\"{0}\", \"imie\", \"nazw\", \"1234\", \"zab\", \"41-800\", \"sob\", \"12\", \"13\", \"1997-05-26\", now(), 'K', {1})", email, pass);
+            return xd;
         }
     }
 }
