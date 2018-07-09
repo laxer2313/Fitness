@@ -10,7 +10,6 @@ namespace Fitness.View
 {
     class View : IView
     {
-        Menu menu;
 
         public event Action<string, string> Login;
         public event Action<User> Register;

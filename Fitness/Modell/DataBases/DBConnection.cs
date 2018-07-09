@@ -63,7 +63,7 @@ namespace Fitness.Modell.DataBases
                 password = hashedInputStringBuilder.ToString();
             }
             if (password == getpassword)
-                return getUser(email, password);
+                return getUser(email);
             else return null;
         }
 
@@ -87,12 +87,12 @@ namespace Fitness.Modell.DataBases
         }
 
 
-        User getUser(string email, string password)
+        User getUser(string email)
         {
             List<string> list = new List<string>();
 
             connection = new MySqlConnection(conStrBuilder.ConnectionString);
-            command = new MySqlCommand(Query.GetUser(email, password), connection);
+            command = new MySqlCommand(Query.GetUser(email), connection);
 
             try
             {
@@ -100,9 +100,8 @@ namespace Fitness.Modell.DataBases
                 MySqlDataReader dataReader = command.ExecuteReader();
 
                 dataReader.Read();
-                string a;
-                foreach (var par in dataReader)
-                    a = par.ToString();
+                for (int i = 0; i < 13; i++)
+                    list.Add(dataReader[i].ToString());
             }
             catch (Exception exception)
             {
