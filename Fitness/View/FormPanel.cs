@@ -31,12 +31,12 @@ namespace Fitness
 
         private void buttonLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            Application.Exit();
         }
     }
 }

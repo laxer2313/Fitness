@@ -12,10 +12,18 @@ namespace Fitness
 {
     public partial class Menu : Form
     {
-        public Menu()
+
+
+        public Menu(Action<string, string> login, Action<Modell.User> register)
         {
             InitializeComponent();
+            this.login += login;
+            this.register += register;
         }
+
+        event Action<string, string> login;
+        event Action<Modell.User> register;
+
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
@@ -24,14 +32,16 @@ namespace Fitness
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-            FormRegister Formregister = new FormRegister();
+            FormRegister Formregister = new FormRegister(register);
             Formregister.ShowDialog();
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            FormLogin FormLogIn = new FormLogin();
+            FormLogin FormLogIn = new FormLogin(login);
             FormLogIn.ShowDialog();
         }
+
+
     }
 }

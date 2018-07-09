@@ -16,13 +16,10 @@ namespace Fitness
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
             Modell.Model model = new Modell.Model();
-            Presenter.Presenter pre = new Presenter.Presenter(model); 
-            
-
-
-
+            View.View view = new View.View();
+            Presenter.Presenter presenter = new Presenter.Presenter(model, view);
+            view.Run();
         }
     }
 }

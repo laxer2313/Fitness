@@ -9,7 +9,11 @@ namespace Fitness.Modell
     interface IModel
     {
         void Login(string email, string password);
-        
+
+        void Register(User user);
+
+        List<Classes> GetClasses();
+
 
     }
 }

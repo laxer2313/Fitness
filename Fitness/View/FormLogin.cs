@@ -12,21 +12,22 @@ namespace Fitness
 {
     public partial class FormLogin : Form
     {
-        public FormLogin()
+        public FormLogin(Action<string, string> login)
         {
             InitializeComponent();
+            this.login += login;
         }
 
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        public event Action<string, string> Login;
+        event Action<string, string> login;
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
-            Login(textBoxEmail.Text, textBoxPassword.Text);
+            login(textBoxEmail.Text, textBoxPassword.Text);
         }
     }
 }

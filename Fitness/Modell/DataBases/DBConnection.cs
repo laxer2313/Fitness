@@ -32,6 +32,7 @@ namespace Fitness.Modell.DataBases
 
         public User Login(string email, string password)
         {
+            User user = new User();
             connection = new MySqlConnection(conStrBuilder.ConnectionString);
             command = new MySqlCommand(Query.GetPassword(email), connection);
 
@@ -52,7 +53,15 @@ namespace Fitness.Modell.DataBases
             {
                 connection.Close();
             }
-
+            byte[] bytes = Encoding.UTF8.GetBytes(password);
+            using (var hash = System.Security.Cryptography.SHA512.Create())
+            {
+                var hashedInputBytes = hash.ComputeHash(bytes);
+                var hashedInputStringBuilder = new StringBuilder(128);
+                foreach (var b in hashedInputBytes)
+                    hashedInputStringBuilder.Append(b.ToString("X2"));
+                password = hashedInputStringBuilder.ToString();
+            }
             if (password == getpassword)
                 return getUser(email, password);
             else return null;
@@ -83,7 +92,6 @@ namespace Fitness.Modell.DataBases
             List<string> list = new List<string>();
 
             connection = new MySqlConnection(conStrBuilder.ConnectionString);
-            StringBuilder query = new StringBuilder();
             command = new MySqlCommand(Query.GetUser(email, password), connection);
 
             try
@@ -92,8 +100,9 @@ namespace Fitness.Modell.DataBases
                 MySqlDataReader dataReader = command.ExecuteReader();
 
                 dataReader.Read();
-                foreach(var par in dataReader)
-                list.Add(par.ToString());
+                string a;
+                foreach (var par in dataReader)
+                    a = par.ToString();
             }
             catch (Exception exception)
             {
@@ -106,6 +115,35 @@ namespace Fitness.Modell.DataBases
             User user = new User(list);
 
             return user;
+        }
+
+        List<Classes> GetClasses()
+        {
+            List<Classes> list = new List<Classes>();
+
+            connection = new MySqlConnection(conStrBuilder.ConnectionString);
+            command = new MySqlCommand(Query.GetClasses(), connection);
+
+            try
+            {
+                connection.Open();
+                MySqlDataReader dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    Classes classes = new Classes(dataReader);
+                    list.Add(classes);
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return list;
         }
     }
 }
