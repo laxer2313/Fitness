@@ -27,14 +27,15 @@ namespace Fitness
             FormRegister Formregister = new FormRegister();
             Formregister.ShowDialog();
 
-            FormPanel f1 = new FormPanel();
-            f1.ShowDialog();
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             FormLogin FormLogIn = new FormLogin();
             FormLogIn.ShowDialog();
+
+            FormPanel f1 = new FormPanel();
+            f1.ShowDialog();
         }
     }
 }

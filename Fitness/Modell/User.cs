@@ -29,8 +29,9 @@ namespace Fitness.Modell
 
         public bool IsLoginValid(string email, string password)
         {
-            var comand = Query.GetUser(email, password);
+            var command = Query.GetUser(email, password);
             return false;
         }
+
     }
 }

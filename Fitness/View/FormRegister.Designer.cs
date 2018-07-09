@@ -100,6 +100,7 @@
             this.buttonCreateUser.TabIndex = 4;
             this.buttonCreateUser.Text = "Stwórz konto";
             this.buttonCreateUser.UseVisualStyleBackColor = true;
+            this.buttonCreateUser.Click += new System.EventHandler(this.buttonCreateUser_Click);
             // 
             // labelSurname
             // 
@@ -274,7 +275,6 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(264, 27);
             this.textBoxEmail.TabIndex = 24;
-            //this.textBoxEmail.TextChanged += new System.EventHandler(this.textBox1_Validated);
             // 
             // textBoxZipCode
             // 
@@ -297,12 +297,15 @@
             this.dateTimePickerDateOfBirth.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F);
             this.dateTimePickerDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerDateOfBirth.Location = new System.Drawing.Point(182, 437);
+            this.dateTimePickerDateOfBirth.MaxDate = new System.DateTime(2018, 7, 9, 0, 0, 0, 0);
             this.dateTimePickerDateOfBirth.Name = "dateTimePickerDateOfBirth";
             this.dateTimePickerDateOfBirth.Size = new System.Drawing.Size(264, 27);
             this.dateTimePickerDateOfBirth.TabIndex = 27;
+            this.dateTimePickerDateOfBirth.Value = new System.DateTime(2018, 7, 9, 0, 0, 0, 0);
             // 
             // comboBoxSex
             // 
+            this.comboBoxSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSex.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F);
             this.comboBoxSex.FormattingEnabled = true;
             this.comboBoxSex.Location = new System.Drawing.Point(182, 470);

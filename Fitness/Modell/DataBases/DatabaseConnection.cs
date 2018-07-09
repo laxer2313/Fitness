@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 
 namespace Fitness.Modell.DataBases
@@ -50,13 +51,22 @@ namespace Fitness.Modell.DataBases
             Close();
         }
 
-        public void ExecuteProcedure(string procedure)
+        public string ExecuteProcedure(string procedure)
         {
             using (MySqlCommand cmd = new MySqlCommand())
             {
                 cmd.Connection = _connection;
                 cmd.CommandText = procedure;
-                cmd.ExecuteNonQuery();
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return "Możesz się zalogować";
+                }
+                catch (Exception)
+                {
+                    return "Taki użytkownik już istnieje!";
+                }
+                
             }
         }
     }

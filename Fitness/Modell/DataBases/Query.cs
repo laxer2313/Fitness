@@ -28,18 +28,11 @@ namespace Fitness.Modell.DataBases
             return query.ToString();
         }
 
-        public static string AddUser(User user)
-        {
-            StringBuilder query = new StringBuilder();
-            query.AppendFormat(ADD_USER, user.Email, user.Name, user.LastName, user.PhoneNumber, user.City, user.PosteCode,
-                               user.Street, user.StreetNumber, user.ApartmentNumber, user.BirthdayDate, user.Sex, user.Password);
-            return query.ToString();
-        }
 
-        public static string AddTestUser(string email, string pass)
+        public static string AddUser(string imie, string nazwisko, string tel, string miasto, string ulica, string nrdomu, string nrmieszkania, string email, string kodpocz, string haslo, string data, string płeć)
         {
             // tak mozna pisac zapytania
-            string xd = String.Format("insert osoby value(\"{0}\", \"imie\", \"nazw\", \"1234\", \"zab\", \"41-800\", \"sob\", \"12\", \"13\", \"1997-05-26\", now(), 'K', {1})", email, pass);
+            string xd = String.Format("insert osoby value(\"{0}\", \"{1}\", \"{2}\", \"{3}\", \"{4}\", \"{5}\", \"{6}\", \"{7}\", \"{8}\", \"{9}\", now(), \"{10}\", \"{11}\")", email, imie, nazwisko, tel, miasto, kodpocz, ulica, nrdomu, nrmieszkania, data, płeć, haslo);
             return xd;
         }
     }

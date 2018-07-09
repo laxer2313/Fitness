@@ -32,19 +32,17 @@ namespace Fitness
         }
 
         public string Email { get { return textBoxEmail.Text; } set { textBoxEmail.Text = value; } }
-        public string Password { get { return textBoxEmail.Text; } set { textBoxEmail.Text = value; } }
+        public string Password { get { return textBoxPassword.Text; } set { textBoxPassword.Text = value; } }
         public bool CanLogin { get; set; }
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
 
             // to jest tylko do testowania zapytan
-            var dbc = new DatabaseConnection("localhost", "fitness", "root", "");
-            //MySql.Data.MySqlClient.MySqlConnection connection = new MySql.Data.MySqlClient.MySqlConnection("Server=localhost; database=fitness; UID=root; password=; sslmode=none");
-            //connection.Open();
-            MessageBox.Show(dbc.Open().ToString());
-            dbc.ExecuteProcedure(Query.AddTestUser("admin", "123"));
-            MessageBox.Show("XD");
+            //var dbc = new DatabaseConnection("localhost", "fitness", "root", "");
+            //MessageBox.Show(dbc.Open().ToString());
+            //dbc.ExecuteProcedure(Query.AddTestUser("admin", "123"));
+            //MessageBox.Show("XD");
             
 
             // koniec testowania zapytan
@@ -56,6 +54,10 @@ namespace Fitness
                 // uzytkownik nie istnieej wiec informacja ze zle passy
                 MessageBox.Show("Username or password are wrong");
                 return;
+            }
+            else
+            {
+                MessageBox.Show("Można się zalogować");
             }
             // uzytkownik istnieje wiec przenosi do panelu
             FormPanel Main = new FormPanel();
