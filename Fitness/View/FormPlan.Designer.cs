@@ -126,7 +126,6 @@
             this.textBox_511 = new System.Windows.Forms.TextBox();
             this.textBox_509 = new System.Windows.Forms.TextBox();
             this.textBox_407 = new System.Windows.Forms.TextBox();
-            this.textBox_207 = new System.Windows.Forms.TextBox();
             this.textBox_508 = new System.Windows.Forms.TextBox();
             this.textBox_709 = new System.Windows.Forms.TextBox();
             this.textBox_710 = new System.Windows.Forms.TextBox();
@@ -161,6 +160,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonClose = new System.Windows.Forms.Button();
+            this.textBox_207 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -541,6 +541,7 @@
             // textBox_107
             // 
             this.textBox_107.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.textBox_107.Enabled = false;
             this.textBox_107.Location = new System.Drawing.Point(109, 44);
             this.textBox_107.Multiline = true;
             this.textBox_107.Name = "textBox_107";
@@ -1407,17 +1408,6 @@
             this.textBox_407.TabIndex = 95;
             this.textBox_407.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox_207
-            // 
-            this.textBox_207.BackColor = System.Drawing.Color.White;
-            this.textBox_207.Location = new System.Drawing.Point(214, 44);
-            this.textBox_207.Multiline = true;
-            this.textBox_207.Name = "textBox_207";
-            this.textBox_207.ReadOnly = true;
-            this.textBox_207.Size = new System.Drawing.Size(98, 33);
-            this.textBox_207.TabIndex = 96;
-            this.textBox_207.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // textBox_508
             // 
             this.textBox_508.BackColor = System.Drawing.Color.White;
@@ -1773,7 +1763,7 @@
             // 
             this.buttonClose.FlatAppearance.BorderSize = 2;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonClose.ForeColor = System.Drawing.Color.Red;
             this.buttonClose.Location = new System.Drawing.Point(869, 430);
             this.buttonClose.MinimumSize = new System.Drawing.Size(126, 51);
@@ -1783,6 +1773,17 @@
             this.buttonClose.Text = "Zamknij";
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // textBox_207
+            // 
+            this.textBox_207.BackColor = System.Drawing.Color.White;
+            this.textBox_207.Location = new System.Drawing.Point(214, 44);
+            this.textBox_207.Multiline = true;
+            this.textBox_207.Name = "textBox_207";
+            this.textBox_207.ReadOnly = true;
+            this.textBox_207.Size = new System.Drawing.Size(98, 33);
+            this.textBox_207.TabIndex = 96;
+            this.textBox_207.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FormPlan
             // 
@@ -1806,7 +1807,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1075, 756);
-            this.MinimumSize = new System.Drawing.Size(1075, 756);
+            this.MinimumSize = new System.Drawing.Size(1075, 736);
             this.Name = "FormPlan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Plan zajęć";
@@ -1927,7 +1928,6 @@
         private System.Windows.Forms.TextBox textBox_511;
         private System.Windows.Forms.TextBox textBox_509;
         private System.Windows.Forms.TextBox textBox_407;
-        private System.Windows.Forms.TextBox textBox_207;
         private System.Windows.Forms.TextBox textBox_508;
         private System.Windows.Forms.TextBox textBox_709;
         private System.Windows.Forms.TextBox textBox_710;
@@ -1952,5 +1952,6 @@
         private System.Windows.Forms.TextBox textBox_420;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.TextBox textBox_207;
     }
 }

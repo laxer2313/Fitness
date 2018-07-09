@@ -14,16 +14,15 @@ namespace Fitness
     {
 
 
-        public Menu(Action<string, string> login, Action<Modell.User> register)
+        public Menu(Action login, Action<Modell.User> register)
         {
             InitializeComponent();
             this.login += login;
             this.register += register;
         }
 
-        event Action<string, string> login;
+        event Action login;
         event Action<Modell.User> register;
-
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
@@ -40,10 +39,11 @@ namespace Fitness
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            FormLogin FormLogIn = new FormLogin(login);
-            Hide();
-            FormLogIn.ShowDialog();
-            Show();
+            login();
+            //FormLogin FormLogIn = new FormLogin(login);
+           // Hide();
+            //FormLogIn.ShowDialog();
+            //Show();
         }
 
 

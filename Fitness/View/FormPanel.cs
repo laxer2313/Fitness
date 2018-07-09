@@ -36,6 +36,7 @@ namespace Fitness
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
+            Close();
             Application.Exit();
         }
     }
