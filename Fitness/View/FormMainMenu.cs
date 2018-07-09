@@ -33,13 +33,17 @@ namespace Fitness
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             FormRegister Formregister = new FormRegister(register);
+            Hide();
             Formregister.ShowDialog();
+            Show();
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             FormLogin FormLogIn = new FormLogin(login);
+            Hide();
             FormLogIn.ShowDialog();
+            Show();
         }
 
 
