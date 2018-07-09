@@ -20,7 +20,7 @@ namespace Fitness.Modell.DataBases
         public DatabaseConnection(string server, string database, string uid, string password)
         {
             _connection = new MySqlConnection();
-            _connection.ConnectionString = String.Format("Server={0}; database={1}; UID={2}; password={3}",
+            _connection.ConnectionString = String.Format("Server={0}; database={1}; UID={2}; password={3}; sslmode=none",
                 server, database, uid, password);
         }
 

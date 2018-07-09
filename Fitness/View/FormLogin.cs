@@ -39,11 +39,13 @@ namespace Fitness
         {
 
             // to jest tylko do testowania zapytan
-            var dbc = new DatabaseConnection("localhost", "fitness", "root", "pass");
-
+            var dbc = new DatabaseConnection("localhost", "fitness", "root", "");
+            //MySql.Data.MySqlClient.MySqlConnection connection = new MySql.Data.MySqlClient.MySqlConnection("Server=localhost; database=fitness; UID=root; password=; sslmode=none");
+            //connection.Open();
             MessageBox.Show(dbc.Open().ToString());
             dbc.ExecuteProcedure(Query.AddTestUser("admin", "123"));
             MessageBox.Show("XD");
+            
 
             // koniec testowania zapytan
 
