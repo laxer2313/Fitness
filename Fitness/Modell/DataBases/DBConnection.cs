@@ -100,9 +100,8 @@ namespace Fitness.Modell.DataBases
                 MySqlDataReader dataReader = command.ExecuteReader();
 
                 dataReader.Read();
-                string a;
-                foreach (var par in dataReader)
-                    a = par.ToString();
+                for (int i = 0; i < 13; i++)
+                    list.Add(dataReader[i].ToString());
             }
             catch (Exception exception)
             {
