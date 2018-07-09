@@ -55,5 +55,6 @@ namespace Fitness
 
             register(user);
         }
+
     }
 }
