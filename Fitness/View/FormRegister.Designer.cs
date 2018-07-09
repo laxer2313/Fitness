@@ -292,6 +292,7 @@
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(264, 26);
             this.textBoxPassword.TabIndex = 26;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // dateTimePickerDateOfBirth
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fitness.Modell;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,12 @@ namespace Fitness
 {
     public partial class FormLogin : Form
     {
-        public FormLogin(Action<string, string> login, Action panel)
+        public FormLogin(Action<string, string> login, Action panel, ValueWrapper<bool> EnableLogin )
         {
             InitializeComponent();
             this.login += login;
             this.panel += panel;
+            this.EnableLogin = EnableLogin;
         }
 
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
@@ -26,14 +28,16 @@ namespace Fitness
 
         event Action<string, string> login;
         event Action panel;
+        ValueWrapper<bool> EnableLogin;
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
             login(textBoxEmail.Text, textBoxPassword.Text);
-            Hide();
-            panel();
-            Close();
-            
+            if (EnableLogin == true)
+            {
+                Close();
+                panel();
+            }
         }
     }
 }

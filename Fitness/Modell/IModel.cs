@@ -13,7 +13,7 @@ namespace Fitness.Modell
         void Register(User user);
 
         List<Classes> GetClasses();
-
+        ValueWrapper<bool> HaveUser { get; }
 
     }
 }

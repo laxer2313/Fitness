@@ -19,16 +19,26 @@ namespace Fitness.Presenter
             this.view = view;
             view.Register += Register;
             view.Login += Login;
+            view.GetClasses += GetClasses;
         }
 
         void Login(string email, string password)
         {
             model.Login(email, password);
+            view.LoginEnable = model.HaveUser;
+            if (model.HaveUser)
+                view.Panel();
+            else view.Comunicat("Bledne dane logowania");
         }
 
         void Register(User user)
         {
             model.Register(user);
+        }
+
+        void GetClasses()
+        {
+            view.DataClasses = model.GetClasses();
         }
     }
 }
