@@ -10,9 +10,10 @@ namespace Fitness.Modell.DataBases
     {
         static string GET_PASSWORD = "select haslo from osoby where email='{0}'";
         static string GET_USER = "select * from osoby where email = '{0}' and haslo = '{1}'";
-        static string GET_CLASSESS = "select id, nazwa, godzina_rozpoczecia, ilosc_miejsc, dzien_tygodnia, concat(imie, \" \", nazwisko) from zajecia z, osoby o where z.email = o.osoby";
+        static string GET_CLASSESS = "select id, nazwa, godzina_rozpoczecia, ilosc_miejsc, dzien_tygodnia, concat(imie, ' ', nazwisko) from zajecia z, osoby o where z.prowadzacy = o.email";
         static string ADD_USER = "insert osoby value('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', now(), '{10}', '{11}')";
         static string GET_NAME = "select concat(imie, ' ', nazwisko) from osoby where email = '{0}'";
+        static string CLASSES_USER = "select count(*) from zajecia z, karnety k, osoby o, posiada p where z.id=k.id and k.id=p.karnet and p.osoba=o.email and z.id={0} and p.od>=curdate() and p.do<adddate(curdate(), interval 7 day)";
 
         public static string GetPassword(string email)
         {
@@ -43,6 +44,13 @@ namespace Fitness.Modell.DataBases
         {
             StringBuilder query = new StringBuilder();
             query.AppendFormat(GET_NAME, email);
+            return query.ToString();
+        }
+
+        public static string ClassesUsers(uint id)
+        {
+            StringBuilder query = new StringBuilder();
+            query.AppendFormat(CLASSES_USER, id);
             return query.ToString();
         }
     }

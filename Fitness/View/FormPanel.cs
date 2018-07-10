@@ -7,19 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Fitness.Modell;
 
 namespace Fitness
 {
     public partial class FormPanel : Form
     {
-        public FormPanel()
+        List<Classes> dataClasses;
+        public FormPanel(List<Classes> dataClasses)
         {
             InitializeComponent();
+            this.dataClasses = dataClasses;
         }
 
         private void buttonPlan_Click(object sender, EventArgs e)
         {
-            FormPlan plan = new FormPlan();
+            FormPlan plan = new FormPlan(dataClasses);
             plan.ShowDialog();
         }
 
@@ -36,7 +39,6 @@ namespace Fitness
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            Close();
             Application.Exit();
         }
     }

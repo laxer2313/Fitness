@@ -14,11 +14,19 @@ namespace Fitness.Modell
         {
             db = new DataBases.DBConnection();
         }
-
+        public ValueWrapper<bool> HaveUser
+        {
+            get
+            {
+                if (user == null)
+                    return new ValueWrapper<bool>(false);
+                else return new ValueWrapper<bool>(true);
+            }
+        }
 
         public List<Classes> GetClasses()
         {
-            throw new NotImplementedException();
+            return db.GetClasses();
         }
 
         public void Login(string email, string password)

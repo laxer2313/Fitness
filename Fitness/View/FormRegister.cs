@@ -15,11 +15,10 @@ namespace Fitness
     {
 
         event Action<User> register;
-
-        public FormRegister(Action<User> register)
+        public FormRegister(Action<User> Register)
         {
             InitializeComponent();
-            this.register += register;
+            register += Register;
             comboBoxSex.DataSource = new List<string>{ "Kobieta", "Mężczyzna"};
             dateTimePickerDateOfBirth.Format = DateTimePickerFormat.Custom;
             dateTimePickerDateOfBirth.CustomFormat = "yyyy-MM-dd";

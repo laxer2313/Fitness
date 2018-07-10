@@ -13,7 +13,7 @@ namespace Fitness.View
 
         public event Action<string, string> Login;
         public event Action<User> Register;
-        event Action _login;
+        public event Action GetClasses;
 
         Menu menu;
         public View()
@@ -23,22 +23,38 @@ namespace Fitness.View
 
         public void Run()
         {
+            menu.register += Register;
             Application.Run(menu);
         }
 
         void login()
         {
-            FormLogin formLogin = new FormLogin(Login, panel);
+            FormLogin formLogin = new FormLogin(Login, Panel, LoginEnable);
             menu.Hide();
             formLogin.ShowDialog();
-            menu.Show();
+            try
+            {
+                menu.Show();
+            }
+            catch (Exception e)
+            {
 
+            }
         }
 
-        void panel()
+        public void Panel()
         {
-            FormPanel formPanel = new FormPanel();
+            GetClasses();
+            FormPanel formPanel = new FormPanel(DataClasses);
             formPanel.ShowDialog();
         }
+        public void Comunicat(string text)
+        {
+            MessageBox.Show(text, "Blad w wprowadzonych danych", MessageBoxButtons.OK);
+        }
+
+        public ValueWrapper<bool> LoginEnable { get; set; }
+
+        public List<Classes> DataClasses { set; private get; }
     }
 }

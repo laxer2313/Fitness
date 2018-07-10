@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Fitness.Modell
 {
-    class Classes
+    public class Classes
     {
         public Classes(MySqlDataReader data)
         {
@@ -17,9 +17,12 @@ namespace Fitness.Modell
             Name = data[1].ToString();
             StartTime = data[2].ToString();
             Instructor = data[5].ToString();
+            DataBases.DBConnection dBConnection = new DataBases.DBConnection();
+            TakenPlaces = dBConnection.TakenPlaces(Id);
         }
         uint dayOfWeek;
         public uint Places { get; private set; }
+        public uint TakenPlaces { get; set; }
         public string Name { get; private set; }
         public string DayOfWeek
         {
@@ -56,5 +59,6 @@ namespace Fitness.Modell
         public string Instructor { get; private set; }
         public string StartTime { get; private set; }
         public uint Id { get; private set; }
+        public uint NumberOfDay { get { return dayOfWeek; } }
     }
 }

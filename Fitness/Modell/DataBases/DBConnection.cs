@@ -116,7 +116,7 @@ namespace Fitness.Modell.DataBases
             return user;
         }
 
-        List<Classes> GetClasses()
+        public List<Classes> GetClasses()
         {
             List<Classes> list = new List<Classes>();
 
@@ -143,6 +143,30 @@ namespace Fitness.Modell.DataBases
                 connection.Close();
             }
             return list;
+        }
+
+
+        public uint TakenPlaces(uint id)
+        {
+            connection = new MySqlConnection(conStrBuilder.ConnectionString);
+            command = new MySqlCommand(Query.ClassesUsers(id), connection);
+            try
+            {
+                connection.Open();
+                MySqlDataReader dataReader = command.ExecuteReader();
+
+                dataReader.Read();
+                return uint.Parse(dataReader[0].ToString());
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return 0;
         }
     }
 }

@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Modell\Classes.cs" />
     <Compile Include="Modell\Pass.cs" />
+    <Compile Include="Modell\ValueWrapper.cs" />
     <Compile Include="View\FormBuy.cs">
       <SubType>Form</SubType>
     </Compile>
