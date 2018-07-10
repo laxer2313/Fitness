@@ -29,6 +29,7 @@ namespace Fitness.Presenter
         void Register(User user)
         {
             model.Register(user);
+            //test
         }
     }
 }
