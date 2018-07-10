@@ -13,7 +13,7 @@ namespace Fitness.View
         event Action<User> Register;
         event Action GetClasses;
         void Panel();
-        void Comunicat(string text);
+        void Comunicat(string text, string text2);
         
         ValueWrapper<bool> LoginEnable { get; set; }
 

@@ -67,7 +67,7 @@ namespace Fitness.Modell.DataBases
             else return null;
         }
 
-        public void AddUser(User user)
+        public bool AddUser(User user)
         {
             connection = new MySqlConnection(conStrBuilder.ConnectionString);
             command = new MySqlCommand(Query.AddUser(user), connection);
@@ -78,12 +78,13 @@ namespace Fitness.Modell.DataBases
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.Message);
+                return false;
             }
             finally
             {
                 connection.Close();
             }
+            return true;
         }
 
 

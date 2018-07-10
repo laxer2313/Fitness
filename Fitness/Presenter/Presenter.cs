@@ -28,12 +28,19 @@ namespace Fitness.Presenter
             view.LoginEnable = model.HaveUser;
             if (model.HaveUser)
                 view.Panel();
-            else view.Comunicat("Bledne dane logowania");
+            else view.Comunicat("Bledne dane logowania", "Blad w wprowadzonych danych");
         }
 
         void Register(User user)
         {
-            model.Register(user);
+            if(model.Register(user))
+            {
+                view.Comunicat("Rejestracja zakonczyla sie powodzeniem!", "Zakonczenie rejestracji");
+            }
+            else
+                view.Comunicat("Rejestracja zakonczyla sie niepowodzeniem!", "Blad w wprowadzonych danych");
+
+
         }
 
         void GetClasses()

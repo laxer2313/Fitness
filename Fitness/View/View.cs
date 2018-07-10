@@ -48,9 +48,9 @@ namespace Fitness.View
             FormPanel formPanel = new FormPanel(DataClasses);
             formPanel.ShowDialog();
         }
-        public void Comunicat(string text)
+        public void Comunicat(string text, string text2)
         {
-            MessageBox.Show(text, "Blad w wprowadzonych danych", MessageBoxButtons.OK);
+            MessageBox.Show(text, text2, MessageBoxButtons.OK);
         }
 
         public ValueWrapper<bool> LoginEnable { get; set; }

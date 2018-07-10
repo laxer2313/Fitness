@@ -10,7 +10,7 @@ namespace Fitness.Modell
     {
         void Login(string email, string password);
 
-        void Register(User user);
+        bool Register(User user);
 
         List<Classes> GetClasses();
         ValueWrapper<bool> HaveUser { get; }

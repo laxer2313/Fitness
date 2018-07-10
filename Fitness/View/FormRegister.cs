@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,28 +32,52 @@ namespace Fitness
 
         private void buttonCreateUser_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            user.Email = textBoxEmail.Text;
-            user.Name = textBoxName.Text;
-            user.LastName = textBoxSurname.Text;
-            user.PhoneNumber = textBoxPhone.Text;
-            user.PosteCode = textBoxZipCode.Text;
-            if(comboBoxSex.SelectedItem.ToString() == "Kobieta")
+            bool validmail = false, validPass;
+            try
             {
-                user.Sex = "K";
+                if (textBoxEmail.Text == "")
+                    throw new Exception();
+                MailAddress mail = new MailAddress(textBoxEmail.Text);
+                validmail = true;
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Nieprawidłowy adres email!");
+                validmail = false;
+            }
+            if (textBoxPassword.Text.Length >= 6)
+                validPass = true;
             else
             {
-                user.Sex = "M";
+                MessageBox.Show("Haslo musi byc dlugosci wiekszej od 5!");
+                validPass = false;
             }
-            user.Street = textBoxStreet.Text;
-            user.StreetNumber = textBoxNumberOfHouse.Text;
-            user.City = textBoxCity.Text;
-            user.ApartmentNumber = textBoxNumberOfFlat.Text;
-            user.BirthdayDate = dateTimePickerDateOfBirth.Text;
-            user.ClearPassword = textBoxPassword.Text;
 
-            register(user);
+            if (validmail && validPass)
+            {
+                User user = new User();
+                user.Email = textBoxEmail.Text.Trim();
+                user.Name = textBoxName.Text.Trim();
+                user.LastName = textBoxSurname.Text.Trim();
+                user.PhoneNumber = textBoxPhone.Text.Trim();
+                user.PosteCode = textBoxZipCode.Text.Trim();
+                if (comboBoxSex.SelectedItem.ToString() == "Kobieta")
+                {
+                    user.Sex = "K";
+                }
+                else
+                {
+                    user.Sex = "M";
+                }
+                user.Street = textBoxStreet.Text.Trim();
+                user.StreetNumber = textBoxNumberOfHouse.Text.Trim();
+                user.City = textBoxCity.Text.Trim();
+                user.ApartmentNumber = textBoxNumberOfFlat.Text.Trim();
+                user.BirthdayDate = dateTimePickerDateOfBirth.Text;
+                user.ClearPassword = textBoxPassword.Text;
+
+                register(user);
+            }
         }
 
     }

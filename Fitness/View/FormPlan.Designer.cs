@@ -428,6 +428,7 @@
             this.textBox4.Size = new System.Drawing.Size(82, 33);
             this.textBox4.TabIndex = 59;
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox4.Visible = false;
             // 
             // label25
             // 
@@ -437,6 +438,7 @@
             this.label25.Size = new System.Drawing.Size(51, 13);
             this.label25.TabIndex = 60;
             this.label25.Text = "Zapisano";
+            this.label25.Visible = false;
             // 
             // label27
             // 
@@ -447,6 +449,7 @@
             this.label27.Size = new System.Drawing.Size(116, 17);
             this.label27.TabIndex = 62;
             this.label27.Text = "Pozostało wejść: ";
+            this.label27.Visible = false;
             // 
             // label28
             // 
@@ -456,6 +459,7 @@
             this.label28.Size = new System.Drawing.Size(41, 13);
             this.label28.TabIndex = 63;
             this.label28.Text = "label28";
+            this.label28.Visible = false;
             // 
             // pictureBox1
             // 

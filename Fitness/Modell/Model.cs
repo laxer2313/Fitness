@@ -34,9 +34,9 @@ namespace Fitness.Modell
             user = db.Login(email, password);
         }
 
-        public void Register(User user)
+        public bool Register(User user)
         {
-            db.AddUser(user);
+            return db.AddUser(user);
         }
     }
 }
